@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  25 FEB 2026 09:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  26 FEB 2026 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -233,8 +233,12 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidth=\dimen184
 \titlewidthlast=\dimen185
 \titlewidthfirst=\dimen186
+) (Practica_1.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 11.
 )
-No file Practica_1.aux.
 \openout1 = `Practica_1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
@@ -253,9 +257,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
 LaTeX Info: Redefining \. on input line 34.
 LaTeX Info: Redefining \% on input line 34.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 34.
-(C:\Users\edwin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+ (C:\Users\edwin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count308
 \scratchdimen=\dimen187
@@ -336,18 +338,11 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 62--64
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 74.
 
-
-LaTeX Warning: Citation `referencia1' on page 1 undefined on input line 75.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 90.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 90.
 [1
 
 {C:/Users/edwin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/uis_logo.png> <./images/e3t_logo.png>] (Practica_1.aux
-LaTeX Info: Redefining \. on input line 11.
-LaTeX Info: Redefining \% on input line 11.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
 )
  ***********
 LaTeX2e <2025-11-01>
@@ -357,25 +352,19 @@ L3 programming layer <2026-01-19>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 4956 strings out of 467867
- 84186 string characters out of 5418334
- 628210 words of memory out of 5000000
- 33798 multiletter control sequences out of 15000+600000
- 632218 words of font info for 55 fonts, out of 8000000 for 9000
+ 4930 strings out of 467867
+ 83900 string characters out of 5418334
+ 603498 words of memory out of 5000000
+ 33778 multiletter control sequences out of 15000+600000
+ 629742 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,7n,77p,297b,459s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Practica_1.pdf (1 page, 174813 bytes).
+ 73i,7n,77p,297b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Practica_1.pdf (1 page, 130147 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
+ 46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
