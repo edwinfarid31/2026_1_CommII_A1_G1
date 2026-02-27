@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  26 FEB 2026 21:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  27 FEB 2026 06:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**c:/UNIVERSIDAD/COMU_II/PRACTICA_1/INFORME/Practica_1.tex
-(c:/UNIVERSIDAD/COMU_II/PRACTICA_1/INFORME/Practica_1.tex
+**c:/UNIVERSIDAD/COMU_II/PRACTICA_2/Informe/informe_2.tex
+(c:/UNIVERSIDAD/COMU_II/PRACTICA_2/Informe/informe_2.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (C:\Users\edwin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -233,13 +233,13 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidth=\dimen184
 \titlewidthlast=\dimen185
 \titlewidthfirst=\dimen186
-) (Practica_1.aux
-LaTeX Info: Redefining \. on input line 11.
-LaTeX Info: Redefining \% on input line 11.
+) (informe_2.aux
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 11.
+(babel)             Reported on input line 10.
 )
-\openout1 = `Practica_1.aux'.
+\openout1 = `informe_2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
@@ -340,7 +340,7 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 
 [1
 
-{C:/Users/edwin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/uis_logo.png> <./images/e3t_logo.png>] (Practica_1.aux
+{C:/Users/edwin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/uis_logo.png> <./images/e3t_logo.png>] (informe_2.aux
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
 )
@@ -354,15 +354,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 4930 strings out of 467867
- 83900 string characters out of 5418334
- 603498 words of memory out of 5000000
- 33778 multiletter control sequences out of 15000+600000
+ 4931 strings out of 467867
+ 83895 string characters out of 5418334
+ 603496 words of memory out of 5000000
+ 33779 multiletter control sequences out of 15000+600000
  629742 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,7n,77p,297b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,7n,77p,296b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Practica_1.pdf (1 page, 130147 bytes).
+Output written on informe_2.pdf (1 page, 127361 bytes).
 PDF statistics:
  46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
