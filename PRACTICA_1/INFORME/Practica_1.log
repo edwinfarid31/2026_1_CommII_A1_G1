@@ -298,12 +298,8 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-) (Practica_1.aux
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 12.
 )
+No file Practica_1.aux.
 \openout1 = `Practica_1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
@@ -322,7 +318,9 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
- (C:\Users\Sergio\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 28.
+(C:\Users\Sergio\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count320
 \scratchdimen=\dimen196
@@ -421,6 +419,9 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 68.
 
 
+LaTeX Warning: Citation `referencia2' on page 1 undefined on input line 69.
+
+
 LaTeX Warning: File `images/bloque_diferencial.png' not found on input line 79.
 
 
@@ -444,6 +445,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Citation `referencia1' on page 1 undefined on input line 84.
+
 [1
 
 {C:/Users/Sergio/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/uis_logo.png> <./images/e3t_logo.png>] (Practica_1.aux
@@ -458,17 +462,23 @@ L3 programming layer <2025-12-24>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 6173 strings out of 467871
- 104677 string characters out of 5417892
- 627694 words of memory out of 5000000
- 34971 multiletter control sequences out of 15000+600000
+ 6170 strings out of 467871
+ 104560 string characters out of 5417892
+ 627697 words of memory out of 5000000
+ 34970 multiletter control sequences out of 15000+600000
  630196 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,7n,77p,326b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,7n,77p,335b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Sergio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Sergio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Sergio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Sergio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Sergio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Sergio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/Sergio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Sergio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Sergio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Sergio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Practica_1.pdf (1 page, 161863 bytes).
+Output written on Practica_1.pdf (1 page, 162077 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
