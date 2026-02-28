@@ -1,0 +1,102 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{multicol} 
+\usepackage{lipsum}    
+\usepackage{booktabs} 
+\usepackage{cite}      
+\usepackage{titlesec} 
+\usepackage{amsmath} % Añadido para las ecuaciones matemáticas
+
+% --- CONFIGURACIÓN ESTILO IEEE ---
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+
+\titleformat{\section}[block]{\bfseries\scshape\centering}{\thesection.}{1em}{}
+\titleformat{\subsection}[block]{\itshape}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}[runin]{\itshape}{\thesubsubsection)}{1em}{}[.---]
+% ---------------------------------
+
+\geometry{margin=2cm, top=1.5cm}
+\definecolor{uisgreen}{RGB}{120,160,60}
+
+\begin{document}
+
+% ===== ENCABEZADO =====
+\noindent
+\begin{minipage}[c]{0.5\textwidth}
+    % Asegúrate de que el logo esté en la carpeta 'images'
+    \includegraphics[height=1.2cm]{images/uis_logo.png} 
+    \begin{minipage}[c]{0.7\textwidth}
+        \vspace{-22pt}
+        \color{uisgreen}\scriptsize\sffamily
+        \textbf{Universidad Industrial de Santander}\\
+        Escuela de Ingenierías Eléctrica,\\
+        Electrónica y Telecomunicaciones
+    \end{minipage}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\textwidth}
+    \raggedleft
+    \begin{minipage}[c]{0.75\textwidth}
+        \color{uisgreen}\scriptsize\sffamily
+        Laboratorio de \textbf{COMUNICACIONES II (27145)}\\
+        Práctica 2: \textbf{TRANSMISIÓN DIGITAL}\\
+        \textbf{ESTADÍSTICAS Y PSD}\\
+        Grupo: \textbf{A1 - G1}
+    \end{minipage}
+    \raisebox{-8pt}{\includegraphics[height=1.2cm]{images/e3t_logo.png}}
+\end{minipage}
+
+\vspace{0.1cm}
+{\color{uisgreen}\rule{\textwidth}{2pt}}
+\vspace{0.5cm}
+
+\begin{center}
+    \Large\textbf{Informe de Práctica 2: Transmisión Digital y Densidad Espectral de Potencia}
+\end{center}
+
+\vspace{0.4cm}
+
+\begin{multicols}{2}
+
+\section{Metodología}
+En esta sección se describe el flujo de trabajo en GNU Radio. Se utilizó un generador de bits aleatorios conectado a un filtro FIR para dar forma al pulso. La tasa de bits se definió como $R_b = 32000$ bps \cite{referencia2}.
+
+\section{Bloque Diferencial}
+El bloque diferencial calcula la derivada discreta de la señal. La ecuación que rige este comportamiento es:
+\begin{equation}
+    y[n] = \frac{x[n] - x[n-1]}{T_s}
+\end{equation}
+
+% INSERTAR IMAGEN AQUÍ
+\begin{center}
+    \includegraphics[width=\linewidth]{images/bloque_diferencial.png}
+    \captionof{figure}{Bloque diferencial implementado.}
+\end{center}
+
+\section{Análisis de la PSD}
+Se observó la Densidad Espectral de Potencia (PSD) para diferentes valores de $Sps$. Como se menciona en \cite{referencia1}, el ancho de banda depende directamente de la forma del pulso.
+
+\section{Conclusiones}
+La implementación en GNU Radio permite validar de manera práctica los conceptos teóricos de la comunicación digital.
+
+% IMPORTANTE: Cerramos multicols antes de la bibliografía para evitar errores de formato
+\end{multicols}
+
+\vspace{0.5cm}
+
+\begin{thebibliography}{99}
+    \bibitem{referencia1} 
+    W. Stallings, \textit{Comunicaciones y Redes de Computadores}, 7ma ed. Prentice Hall, 2004.
+    
+    \bibitem{referencia2}
+    GNU Radio Project, ``Documentation'', [En línea]. Disponible en: \texttt{https://www.gnuradio.org/}.
+\end{thebibliography}
+
+\end{document}
