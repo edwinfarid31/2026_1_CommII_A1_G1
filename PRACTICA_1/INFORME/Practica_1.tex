@@ -77,6 +77,42 @@
 
 \section{Derivador}
 
+Un bloque diferencial calcula la derivada discreta de una señal, es decir, mide el cambio entre una muestra y la anterior. Matemáticamente se expresa como:
+
+\begin{equation}
+    y[n] = \frac{x[n] - x[n-1]}{T_s}
+\end{equation}
+
+donde:
+\begin{itemize}
+    \item $x[n]$ es la muestra actual de la señal.
+    \item $x[n-1]$ es la muestra anterior.
+    \item $T_s$ es el período de muestreo.
+    \item $y[n]$ es la salida diferencial.
+\end{itemize}
+
+Si la señal es constante ($x[n] = x[n-1]$), la salida es cero. Si hay un cambio, la salida refleja la magnitud y dirección de dicho cambio.
+
+% === FIGURA 3 ANCLADA (H) ===
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\columnwidth]{diferenciador.png}
+    \caption{Bloque diferencial}
+    \label{fig:bloque_dif}
+\end{figure}
+
+\subsection{Configuración del bloque}
+
+Este bloque de Python para GNU Radio implementa un bloque síncrono diseñado para procesar flujos de datos tipo \texttt{float32} de manera continua. Su lógica principal reside en el método \texttt{work}, donde utiliza una variable de estado llamada \texttt{self.last\_sample} para preservar la continuidad entre ráfagas de datos; esto evita errores de cálculo en los bordes de cada paquete al insertar el último valor del ciclo anterior al inicio del vector actual mediante \texttt{np.insert}. Finalmente, emplea la función \texttt{np.diff} de NumPy para realizar la resta de elementos adyacentes de forma vectorizada, actualiza la memoria del bloque con la última muestra procesada (\texttt{in0[-1]}) y devuelve la longitud del vector de salida para mantener la sincronía del flujo en el programa.
+
+% === FIGURA 4 ANCLADA (H) ===
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{Señales_IN_OUT.png}
+    \caption{Diferenciador / Derivador}
+    \label{fig:senales_io}
+\end{figure}
+
 \section{Bloque estadistico }
 
 \section{Aplicacion}
