@@ -6,6 +6,7 @@
 \usepackage{xcolor}
 \usepackage{geometry}
 \usepackage{multicol} 
+\usepackage{float}
 \usepackage{lipsum}   
 \usepackage{booktabs} 
 \usepackage{cite}     
@@ -76,6 +77,13 @@
 \section{Acumulador}
 
 \section{Derivador}
+% === FIGURA 3 ANCLADA (H) ===
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\columnwidth]{diferenciador.png}
+    \caption{Bloque diferencial}
+    \label{fig:bloque_dif}
+\end{figure}
 
 Un bloque diferencial calcula la derivada discreta de una señal, es decir, mide el cambio entre una muestra y la anterior. Matemáticamente se expresa como:
 
@@ -93,13 +101,7 @@ donde:
 
 Si la señal es constante ($x[n] = x[n-1]$), la salida es cero. Si hay un cambio, la salida refleja la magnitud y dirección de dicho cambio.
 
-% === FIGURA 3 ANCLADA (H) ===
-\begin{figure}
-    \centering
-    \includegraphics[width=0.4\columnwidth]{diferenciador.png}
-    \caption{Bloque diferencial}
-    \label{fig:bloque_dif}
-\end{figure}
+
 
 \begin{itemize}
     \item  Configuración del bloque
@@ -107,16 +109,14 @@ Si la señal es constante ($x[n] = x[n-1]$), la salida es cero. Si hay un cambio
 Este bloque de código para GNU Radio implementa un proceso síncrono que calcula la variación entre muestras consecutivas de una señal, asegurando que no existan saltos o errores cuando los datos se procesan por ráfagas. Para lograr esto, utiliza una variable de memoria que almacena el último valor del paquete anterior y lo inserta al inicio del nuevo grupo de datos, permitiendo que la función de resta sea continua y fluida. Finalmente, actualiza esta memoria con el dato más reciente para estar listo para el siguiente ciclo, manteniendo así la integridad de la señal en todo momento
 
 \subsection{Configuración del bloque}
-
-Este bloque de Python para GNU Radio implementa un bloque síncrono diseñado para procesar flujos de datos tipo \texttt{float32} de manera continua. Su lógica principal reside en el método \texttt{work}, donde utiliza una variable de estado llamada \texttt{self.last\_sample} para preservar la continuidad entre ráfagas de datos; esto evita errores de cálculo en los bordes de cada paquete al insertar el último valor del ciclo anterior al inicio del vector actual mediante \texttt{np.insert}. Finalmente, emplea la función \texttt{np.diff} de NumPy para realizar la resta de elementos adyacentes de forma vectorizada, actualiza la memoria del bloque con la última muestra procesada (\texttt{in0[-1]}) y devuelve la longitud del vector de salida para mantener la sincronía del flujo en el programa.
-
-% === FIGURA 4 ANCLADA (H) ===
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.9\columnwidth]{Señales_IN_OUT.png}
     \caption{Diferenciador / Derivador}
     \label{fig:senales_io}
 \end{figure}
+
+Este bloque de Python para GNU Radio implementa un bloque síncrono diseñado para procesar flujos de datos tipo \texttt{float32} de manera continua. Su lógica principal reside en el método \texttt{work}, donde utiliza una variable de estado llamada \texttt{self.last\_sample} para preservar la continuidad entre ráfagas de datos; esto evita errores de cálculo en los bordes de cada paquete al insertar el último valor del ciclo anterior al inicio del vector actual mediante \texttt{np.insert}. Finalmente, emplea la función \texttt{np.diff} de NumPy para realizar la resta de elementos adyacentes de forma vectorizada, actualiza la memoria del bloque con la última muestra procesada (\texttt{in0[-1]}) y devuelve la longitud del vector de salida para mantener la sincronía del flujo en el programa.
 
 \section{Bloque estadistico }
 
