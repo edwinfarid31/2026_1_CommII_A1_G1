@@ -71,7 +71,7 @@ class acumulador(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_f(
             1024, #size
             samp_rate, #samp_rate
-            "", #name
+            "Señal de entrada", #name
             1, #number of inputs
             None # parent
         )
@@ -83,7 +83,7 @@ class acumulador(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0_0.enable_tags(True)
         self.qtgui_time_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
         self.qtgui_time_sink_x_0_0.enable_autoscale(True)
-        self.qtgui_time_sink_x_0_0.enable_grid(False)
+        self.qtgui_time_sink_x_0_0.enable_grid(True)
         self.qtgui_time_sink_x_0_0.enable_axis_labels(True)
         self.qtgui_time_sink_x_0_0.enable_control_panel(False)
         self.qtgui_time_sink_x_0_0.enable_stem_plot(False)
@@ -119,7 +119,7 @@ class acumulador(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0 = qtgui.time_sink_f(
             1024, #size
             samp_rate, #samp_rate
-            "", #name
+            "Señal de salida", #name
             1, #number of inputs
             None # parent
         )

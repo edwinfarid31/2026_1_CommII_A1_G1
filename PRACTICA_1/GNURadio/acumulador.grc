@@ -63,7 +63,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [344, 192.0]
+    coordinate: [264, 208.0]
     rotation: 0
     state: enabled
 - name: blocks_vector_source_x_0
@@ -83,7 +83,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [120, 192.0]
+    coordinate: [40, 176.0]
     rotation: 0
     state: enabled
 - name: epy_block_0
@@ -107,7 +107,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [528, 216.0]
+    coordinate: [424, 232.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0
@@ -163,7 +163,7 @@ blocks:
     marker7: '-1'
     marker8: '-1'
     marker9: '-1'
-    name: '""'
+    name: "\"Se\xF1al de salida\""
     nconnections: '1'
     size: '1024'
     srate: samp_rate
@@ -204,7 +204,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [712, 192.0]
+    coordinate: [568, 208.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0_0
@@ -237,7 +237,7 @@ blocks:
     comment: ''
     ctrlpanel: 'False'
     entags: 'True'
-    grid: 'False'
+    grid: 'True'
     gui_hint: ''
     label1: Signal 1
     label10: Signal 10
@@ -260,7 +260,7 @@ blocks:
     marker7: '-1'
     marker8: '-1'
     marker9: '-1'
-    name: '""'
+    name: "\"Se\xF1al de entrada\""
     nconnections: '1'
     size: '1024'
     srate: samp_rate
@@ -301,7 +301,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [432, 72.0]
+    coordinate: [264, 104.0]
     rotation: 0
     state: enabled
 
