@@ -163,6 +163,51 @@ En esta sección se realiza el estudio del comportamiento estocástico del ruido
 Al incrementar la longitud del vector de coeficientes ($h$) en la operación de convolución, se produce un ensanchamiento de la respuesta en el dominio del tiempo. De acuerdo con las propiedades de la transformada de Fourier, este fenómeno se traduce en una \textbf{mayor selectividad} en el dominio de la frecuencia, lo que equivale a un estrechamiento del ancho de banda de paso del sistema.
 
 Esta mayor selectividad permite filtrar con mayor eficacia las componentes de alta frecuencia, donde se distribuye uniformemente la energía del ruido blanco. En consecuencia, la potencia total del ruido en la señal de salida disminuye, lo cual se refleja experimentalmente como una reducción en el nivel del \textit{noise floor} observado en el análisis de densidad espectral de potencia (PSD).
+\section{Análisis de señal proveniente de imagen}
+
+Para este experimento, se reemplazó la fuente de datos aleatoria por una señal proveniente de una imagen, con el objetivo de analizar cómo una fuente real afecta el comportamiento de la señal.
+
+La señal obtenida en el dominio del tiempo mantiene la forma de pulsos rectangulares con niveles bipolares, sin embargo, se evidencian patrones que dependen del contenido de la imagen, lo que indica que no es completamente aleatoria.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/imagen_tiempo.png}
+    \caption{Señal en el dominio del tiempo proveniente de una imagen}
+\end{figure}
+
+En el dominio de la frecuencia, la densidad espectral de potencia presenta una forma general similar a la de una señal rectangular, pero con irregularidades en su forma.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/imagen_psd.png}
+    \caption{PSD de la señal proveniente de una imagen}
+\end{figure}
+
+Estas variaciones indican que la energía no se distribuye de manera uniforme, debido a la correlación presente en los datos de la imagen.
+
+En conclusión, la señal proveniente de una imagen presenta diferencias en su comportamiento espectral respecto a una señal aleatoria, evidenciando la influencia de la fuente de información.
+
+\section{Análisis de señal proveniente de audio}
+
+En este caso, se utilizó una señal proveniente de un archivo de audio, manteniendo el mismo esquema del experimento anterior.
+
+En el dominio del tiempo, la señal conserva la forma de pulsos rectangulares, aunque presenta variaciones más suaves en comparación con una señal aleatoria, lo que refleja la naturaleza de la información de audio.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/audio_tiempo.png}
+    \caption{Señal en el dominio del tiempo proveniente de audio}
+\end{figure}
+
+En la densidad espectral de potencia se observa una mayor concentración de energía en bajas frecuencias, lo que indica que la señal presenta variaciones más lentas en el tiempo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/audio_psd.png}
+    \caption{PSD de la señal proveniente de audio}
+\end{figure}
+
+En conclusión, la señal de audio presenta una distribución espectral diferente, lo cual demuestra que el contenido de la información influye directamente en el comportamiento en frecuencia de la señal.
 \section*{References}
 
 Please number citations consecutively within brackets \cite{b1}. The 
