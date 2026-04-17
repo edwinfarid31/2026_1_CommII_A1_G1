@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  19 MAR 2026 19:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  17 APR 2026 06:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"c:/UNIVERSIDAD/ComuII LAB/PRACTICA_2/Informe/IEEE-conference-template-062824.tex"
-(c:/UNIVERSIDAD/ComuII LAB/PRACTICA_2/Informe/IEEE-conference-template-062824.tex
+**c:/UNIVERSIDAD/2026_1_CommII_A1_G1/PRACTICA_2/Informe/IEEE-conference-template-062824.tex
+(c:/UNIVERSIDAD/2026_1_CommII_A1_G1/PRACTICA_2/Informe/IEEE-conference-template-062824.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (IEEEtran.cls
@@ -301,6 +301,9 @@ LaTeX Warning: Label `fig:mi_imagen' multiply defined.
 
 LaTeX Warning: Label `fig:mi_imagen' multiply defined.
 
+
+LaTeX Warning: Label `fig:mi_imagen' multiply defined.
+
 )
 \openout1 = `IEEE-conference-template-062824.aux'.
 
@@ -430,6 +433,47 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 157--158
  []
 
 [2 <./images/SPS.png> <./images/PSD.png> <./images/dos.jpeg> <./images/Ruido.png>]
+<images/imagen_tiempo.png, id=27, 965.10562pt x 234.8775pt>
+File: images/imagen_tiempo.png Graphic file (type png)
+<use images/imagen_tiempo.png>
+Package pdftex.def Info: images/imagen_tiempo.png  used on input line 174.
+(pdftex.def)             Requested size: 258.0pt x 62.78699pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 174--175
+ [][] 
+ []
+
+<images/imagen_psd.png, id=28, 914.66719pt x 241.65282pt>
+File: images/imagen_psd.png Graphic file (type png)
+<use images/imagen_psd.png>
+Package pdftex.def Info: images/imagen_psd.png  used on input line 182.
+(pdftex.def)             Requested size: 258.0pt x 68.16011pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 182--183
+ [][] 
+ []
+
+<images/audio_tiempo.png, id=29, 960.58875pt x 229.60782pt>
+File: images/audio_tiempo.png Graphic file (type png)
+<use images/audio_tiempo.png>
+Package pdftex.def Info: images/audio_tiempo.png  used on input line 198.
+(pdftex.def)             Requested size: 258.0pt x 61.6691pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 198--199
+ [][] 
+ []
+
+<images/audio_psd.png, id=30, 919.18407pt x 242.40562pt>
+File: images/audio_psd.png Graphic file (type png)
+<use images/audio_psd.png>
+Package pdftex.def Info: images/audio_psd.png  used on input line 206.
+(pdftex.def)             Requested size: 258.0pt x 68.03955pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 206--207
+ [][] 
+ []
+
+[3 <./images/imagen_tiempo.png> <./images/imagen_psd.png> <./images/audio_tiempo.png> <./images/audio_psd.png>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -441,7 +485,9 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3] (IEEE-conference-template-062824.aux
+[4
+
+] (IEEE-conference-template-062824.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
@@ -455,17 +501,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6709 strings out of 467867
- 108855 string characters out of 5418334
- 534039 words of memory out of 5000000
- 35481 multiletter control sequences out of 15000+600000
+ 6737 strings out of 467867
+ 109729 string characters out of 5418334
+ 535039 words of memory out of 5000000
+ 35509 multiletter control sequences out of 15000+600000
  750922 words of font info for 175 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,11n,67p,735b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 59i,11n,67p,742b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/edwin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on IEEE-conference-template-062824.pdf (3 pages, 3110511 bytes).
+Output written on IEEE-conference-template-062824.pdf (4 pages, 3150894 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
+ 83 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
