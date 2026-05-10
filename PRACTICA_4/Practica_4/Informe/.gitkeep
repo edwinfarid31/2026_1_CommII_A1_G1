@@ -1,0 +1,194 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{mathastext}
+\usepackage{url}
+
+% Configuración del título y autores
+\title{Laboratorio 5: La modulación de M-PSK}
+
+\author{
+    \IEEEauthorblockN{Edwin Farid Bolaño Perez}
+    \IEEEauthorblockA{
+    Código: 2212264 \\
+    \textit{Universidad Industrial de Santander}\\
+    edwin2212264@correo.uis.edu.co}
+    
+    \and
+    
+    \IEEEauthorblockN{Sergio Andrés Cárdenas}
+    \IEEEauthorblockA{
+    Código: 2222243 \\
+    \textit{Universidad Industrial de Santander}\\
+    sergio2222243@correo.uis.edu.co}
+    
+    \and
+    
+    \IEEEauthorblockN{Johan Sebastian Fandiño Ruiz}
+    \IEEEauthorblockA{
+    Código: 2204271 \\
+    \textit{Universidad Industrial de Santander}\\
+    Johan2204271@correo.uis.edu.co}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+\small
+Repositorio GitHub: \url{https://github.com/edwinfarid31/2026_1_CommII_A1_G1/tree/Practica_3/PRACTICA_3}
+\end{center}
+
+\begin{abstract}
+This report presents the implementation and analysis of M-PSK and QPSK digital modulation schemes using a software-defined radio (SDR) approach. The study focuses on generating the complex envelope (CE) through two fundamental methods: phase rotation and direct symbol mapping. By analyzing the power spectral density (PSD), the bandwidth was experimentally determined, validating that the spectral nulls correspond to multiples of the symbol rate ($R_s$). Furthermore, the impact of additive white Gaussian noise (AWGN) on the constellation diagram was evaluated, showing how symbol proximity in higher-order modulations ($M=8$) affects system robustness. The results confirm the functional equivalence of the generation methods and establish key parameters for spectral efficiency in modern digital communication systems.
+\end{abstract}
+
+\section{Introducción}
+
+La modulación por desplazamiento de fase ($M$-PSK) constituye uno de los pilares fundamentales de las comunicaciones digitales contemporáneas. Su relevancia radica en la capacidad de codificar información mediante variaciones discretas en la fase de una señal portadora, manteniendo una amplitud constante. Esta característica técnica resulta esencial para optimizar la eficiencia espectral en sistemas de transmisión que operan bajo restricciones de potencia y ancho de banda, tales como los enlaces satelitales, la telefonía móvil de última generación y las redes de datos inalámbricas.
+
+En el desarrollo de esta práctica, se aborda la implementación y el análisis de esquemas de modulación $M$-PSK y QPSK bajo el paradigma de Radio Definido por Software (SDR). El núcleo del estudio reside en el modelado y generación de la Envolvente Compleja (EC), la cual permite representar señales de banda de paso mediante componentes equivalentes en banda base. Se exploran dos metodologías de generación de la EC: la primera basada en la rotación de fase mediante osciladores controlados, y la segunda fundamentada en el mapeo directo de símbolos a través de tablas de verdad en el plano complejo, verificando la consistencia funcional de ambos enfoques.
+
+El análisis se extiende a la caracterización de la señal en los dominios del tiempo y la frecuencia. Mediante la observación de la Densidad Espectral de Potencia (PSD), se valida la relación intrínseca entre la tasa de símbolos ($R_s$) y el ancho de banda ocupado, identificando los nulos espectrales característicos de la modulación. Finalmente, se evalúa el desempeño del sistema ante condiciones no ideales mediante la inserción de ruido blanco gaussiano aditivo (AWGN). Esta evaluación permite cuantificar cómo el incremento en el orden de modulación ($M$) reduce la distancia mínima entre puntos de la constelación, incrementando la sensibilidad del sistema frente a interferencias del canal.
+
+\section{Modulacion Q-PSK}
+
+La implementacion de la modulación Q-PSK en GNURadio es observada en la siguiente imagen:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{ImplementacionQPSK.png}
+    \caption{Modulacion Q-PSK}
+    \label{fig:qpsk_impl}
+\end{figure}
+
+La modulación QPSK (Quadrature Phase Shift Keying o Modulación por Desplazamiento de Fase en Cuadratura) es una técnica de modulación digital que varía la fase de una señal portadora para transmitir datos.
+
+A diferencia de la modulación BPSK (que solo usa dos fases), la QPSK utiliza cuatro fases distintas, lo que le permite transmitir 2 bits por cada símbolo.
+
+Para la modulación QPSK implementada, el análisis del ancho de banda de la envolvente compleja se fundamenta en la relación entre la tasa de bits ($R_b$) y el orden de la modulación ($M$).
+
+\subsection*{Parámetros de Diseño}
+
+\begin{itemize}
+    \item Tasa de bits: $R_b = \SI{32}{\kilo\bit\per\second}$
+    \item Orden de modulación (QPSK): $M = 4$
+    \item Bits por símbolo: $k = \log_2(M) = \log_2(4) = 2$ bits/símbolo
+\end{itemize}
+
+\subsection*{Cálculo de la Tasa de Símbolos ($R_s$)}
+
+La velocidad de símbolos o tasa de baudios determina la cantidad de transiciones de símbolos complejos por unidad de tiempo:
+
+\begin{equation}
+R_s = \frac{R_b}{\log_2(M)} = \frac{32,000 \text{ bps}}{2 \text{ bits/simb}} = 16,000 \text{ símbolos/s}
+\end{equation}
+
+\subsection*{Ancho de Banda ($BW$)}
+
+Considerando pulsos rectangulares en banda base, el ancho de banda del lóbulo principal de la envolvente compleja es numéricamente equivalente a la tasa de símbolos:
+
+\begin{equation}
+BW = R_s = \SI{16}{\kilo\hertz}
+\end{equation}
+
+Podemos observar el ancho de banda en la siguiente imagen:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{anchodebanda_QPSK.png}
+    \caption{Ancho de banda Q-PSK}
+    \label{fig:ancho_qpsk}
+\end{figure}
+
+En la siguiente etapa se configuró el bloque \textit{Chunks to Symbols} para establecer un mapeo específico entre los bits de entrada y los símbolos complejos de la constelación QPSK.
+
+Siguiendo los requerimientos de la guía, se programó la \textit{Symbol Table} con los siguientes valores, donde cada índice decimal del vector fuente corresponde a una combinación de 2 bits ($k=2$):
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Dato (dec)} & \textbf{Bits} & \textbf{Valor Complejo (Cartesiano)} & \textbf{Fase Teórica} \\ \hline
+0 & 00 & $-0.77 - 0.77j$ & $225^\circ (5\pi/4)$ \\ \hline
+1 & 01 & $-1 + 0j$ & $180^\circ (\pi)$ \\ \hline
+2 & 10 & $0 + 1j$ & $90^\circ (\pi/2)$ \\ \hline
+3 & 11 & $0.77 + 0.77j$ & $45^\circ (\pi/4)$ \\ \hline
+\end{tabular}
+\caption{Tabla de verdad y mapeo de constelación QPSK.}
+\label{tab:verdad_qpsk}
+\end{table}
+
+Para validar el diseño, se utilizó un \textit{Vector Source} con la secuencia $(0,1,2,3)$. El resultado en el \textit{QT GUI Constellation Sink} muestra cuatro agrupaciones de puntos centradas en las coordenadas programadas. La dispersión observada en cada símbolo es consecuencia del ruido blanco gaussiano (AWGN) introducido mediante el bloque \textit{Noise Source} con una amplitud de \SI{100}{\milli\volt}, simulando un entorno de transmisión real.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{P5_QPSK.png}
+    \caption{Constelación QPSK con presencia de ruido AWGN}
+    \label{fig:const_qpsk}
+\end{figure}
+
+\section{Generación de la Envolvente Compleja mediante Tabla de Símbolos}
+
+Con el objetivo de implementar la modulación 8-PSK utilizando un método alternativo, se empleó el bloque \textit{Chunks to Symbols} de GNU Radio. En esta metodología, los símbolos binarios son agrupados y posteriormente asociados de forma directa a puntos específicos de una constelación compleja mediante una tabla de símbolos (\textit{Symbol Table}).
+
+La implementación desarrollada reutilizó el mismo diagrama de bloques empleado en los puntos anteriores, agregando una nueva rama compuesta por un bloque \textit{Random Source}, un bloque \textit{Repack Bits}, el bloque \textit{Chunks to Symbols} y el bloque de visualización de constelación.
+
+La implementación realizada en GNU Radio se presenta en la siguiente figura.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{Flujo_Punto5.png}
+    \caption{Implementación del punto 5 mediante el bloque \textit{Chunks to Symbols}}
+    \label{fig:flujo_punto5}
+\end{figure}
+
+Para la modulación 8-PSK se configuró la siguiente tabla de símbolos complejos dentro del bloque \textit{Chunks to Symbols}:
+
+\[
+\text{Symbol Table} =
+\begin{aligned}
+[\, &1,\,
+0.707+0.707j,\,
+0+1j,\,
+-0.707+0.707j, \\
+&-1,\,
+-0.707-0.707j,\,
+0-1j,\,
+0.707-0.707j\,]
+\end{aligned}
+\]
+
+Cada posición del vector corresponde a un símbolo decimal de entrada, estableciendo así el mapeo entre los datos binarios y los puntos de la constelación compleja.
+
+La constelación obtenida experimentalmente se muestra en la siguiente figura.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\linewidth]{Constelacion_Punto5.png}
+    \caption{Diagrama de constelación de la modulación 8-PSK}
+    \label{fig:constelacion_punto5}
+\end{figure}
+
+En la gráfica de constelación se observan ocho agrupaciones de puntos distribuidas uniformemente sobre el círculo unitario del plano complejo, separadas angularmente por intervalos de $45^\circ$. Esto confirma que la modulación 8-PSK fue implementada correctamente.
+
+Además, se verificó que la envolvente compleja generada mediante el bloque \textit{Chunks to Symbols} es equivalente a la obtenida previamente utilizando el método basado en rotación de fase mediante VCO.
+
+Finalmente, se concluye que el bloque \textit{Chunks to Symbols} permite implementar de forma directa la modulación digital mediante una tabla de símbolos complejos, facilitando la construcción y análisis de constelaciones M-PSK en GNU Radio.
+
+\section{Conclusiones}
+
+La modulación \(M\)-PSK constituye una técnica eficiente para la transmisión digital de información, debido a que permite incrementar la cantidad de bits transmitidos por símbolo mediante variaciones discretas de fase sobre una portadora de amplitud constante. A medida que aumenta el orden de modulación \(M\), se mejora la eficiencia espectral del sistema, ya que es posible transmitir una mayor tasa de bits utilizando el mismo ancho de banda. Sin embargo, este incremento también reduce la separación angular entre símbolos de la constelación, disminuyendo la distancia euclidiana mínima y aumentando la sensibilidad frente al ruido y las perturbaciones del canal.
+
+El análisis realizado permitió verificar que el ancho de banda principal de una señal \(M\)-PSK depende fundamentalmente de la velocidad de símbolos \(R_s\), y no de la ubicación específica de los puntos de la constelación en el plano complejo. Asimismo, se comprobó que diferentes representaciones matemáticas de la envolvente compleja producen señales equivalentes siempre que conserven la misma información de amplitud y fase.
+
+Finalmente, el estudio de las constelaciones evidenció la relación directa entre potencia, separación entre símbolos y probabilidad de error. Constelaciones con puntos más separados presentan una mayor robustez ante ruido gaussiano aditivo, mientras que constelaciones de mayor orden requieren relaciones señal-ruido más elevadas para garantizar una detección confiable de los símbolos transmitidos.
+
+\end{document}
